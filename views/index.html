@@ -37,31 +37,30 @@
 
       {{cellName}}
       {{boardSize}}
-      {{pacman.name}}
 
       <div class="board" ng-repeat="cell in board">
-        <div ng-show="isResponded" >{{cell.name}}</div>
+        <div class="{{cell.name}}">{{cell.name}}</div>
         </div>
 
 
  <!--      <table>
       <tbody ng-repeat="cell in board">
           <tr><td>{{cell.name}}</td><td>{{$index}}</td></tr>
-      
+
       </tbody>
      </table>
 
      <table>
       <tbody ng-repeat="cell in board">
           <tr><td>{{cell.name}}</td><td>{{$index}}</td></tr>
-      
+
       </tbody>
      </table>
      {{col1}}
        <table>
       <tbody ng-repeat="cell in cell1">
           <tr><td>{{cell.name}}</td><td>{{$index}}</td></tr>
-      
+
       </tbody>
      </table> -->
 

@@ -33,3 +33,6 @@ expect(x).not.toEqual(y); compares objects or primitives x and y and passes if t
 
 
 https://github.com/pivotal/jasmine/wiki/Matchers
+
+
+https://docs.angularjs.org/api/ng/directive/ngKeypress

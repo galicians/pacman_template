@@ -2,17 +2,17 @@
 
 // Declare app level module which depends on filters, and services
 
-var busuuApp = angular.module('myApp', [
+var pacmanApp = angular.module('pacmanApp', [
   'ngRoute',
-  'myControllers',
-  'myServices'
+  'pacmanControllers',
+  'pacmanServices'
 ])
 
-busuuApp.config(['$routeProvider', 
+pacmanApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
   when('/home', {
-    controller: 'oneCtrl'
+    controller: 'gameController'
   }).
   when('/view2', {
     templateUrl: 'partials/partial2.html',

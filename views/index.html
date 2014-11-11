@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="pacmanApp" ng-controller="gameController" ng-keyup="keypress($event)">
 
 <head>
   <meta charset="utf8">
@@ -8,9 +8,9 @@
   <link rel="stylesheet/less" type="text/css" href="/less/app.less">
 </head>
 
-<body>
+<body >
   <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-  <div ng-controller="oneCtrl">
+  <div>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -35,6 +35,34 @@
       </div>
     </div>
 
+      {{cellName}}
+      {{boardSize}}
+
+      <div class="board" ng-repeat="cell in board">
+        <div class="{{cell.name}}">{{cell.name}}</div>
+        </div>
+
+
+ <!--      <table>
+      <tbody ng-repeat="cell in board">
+          <tr><td>{{cell.name}}</td><td>{{$index}}</td></tr>
+
+      </tbody>
+     </table>
+
+     <table>
+      <tbody ng-repeat="cell in board">
+          <tr><td>{{cell.name}}</td><td>{{$index}}</td></tr>
+
+      </tbody>
+     </table>
+     {{col1}}
+       <table>
+      <tbody ng-repeat="cell in cell1">
+          <tr><td>{{cell.name}}</td><td>{{$index}}</td></tr>
+
+      </tbody>
+     </table> -->
 
 
 

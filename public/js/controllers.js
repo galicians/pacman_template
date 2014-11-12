@@ -4,23 +4,49 @@
 
 var pacmanControllers = angular.module('pacmanControllers', []);
 
-pacmanControllers.controller('gameController', ['$scope','Cell' ,'Corridor', 'Wall', 'Pacman', 'Dot', 'Ghost', 'Maze',  function($scope, Cell, Grid, Pacman, Corridor, Maze) {
-      
-  
-      // var cell = new Cell
-      // var pacman = new Pacman
-      // var maze = new Maze(30, 30)
-     
+pacmanControllers.controller('gameController', ['$scope','Cell' ,'Corridor','Pacman', 'Wall', 'Dot', 'Ghost', 'Maze', 'Layout', function($scope, Cell, Corridor, Pacman, Wall, Dot, Ghost, Maze, Layout) {
+
+
+      var cell = new Cell
+      var corridor = new Corridor
+      var pacman = new Pacman
+      var wall = new Wall
+      var dot = new Dot
+      var ghost = new Ghost
+      var maze = new Maze(30, 30)
+      var layout = Layout
+      maze.generate(new Cell)
+      // maze.cells[0].content = 'hello'
+      // console.log(maze.cells[0].content)
+      maze.populateWalls(layout, wall)
+      console.log(maze)
+      // layout.forEach(function(position) { console.log(maze.cells[position].content) } )
+
+
+
+
+      // var array = []
+      // layout.forEach( function(position) { array.push(position)})
+      // console.log(array)
+     //  console.log(cell)
+     // console.log( corridor)
+     // console.log( pacman)
+     // console.log( wall)
+     // console.log( dot)
+     //  console.log(ghost)
+      // console.log(maze)
+     //  console.log(layout)
+
 
       // maze.place(arrayWalls)
 
-     
-      
+
+
 
   // setupGame()
 
  }]);
-  
+
 
   // function setupGame() {
   //   var cell = new Cell

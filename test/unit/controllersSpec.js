@@ -7,13 +7,16 @@ describe('pacman controllers', function() {
   beforeEach(module('pacmanServices'))
 
   describe('gameController', function() {
-    var scope, ctrl, cell, createCell, corridor, dot, createCorridor, wall, createWall, createDot, ghost, createGhost, pacman, createPacman, maze, createMaze, layout, createLayout
+    var scope, ctrl, cell, createCell, corridor,createCorridor, pacman, createPacman, wall, createWall, dot, createDot, ghost, createGhost,
+    maze, createMaze, layout, createLayout
+
+    // dot, createCorridor, wall, createWall, createDot, ghost, createGhost, pacman, createPacman,  layout, createLayout
 
     beforeEach(inject(function($rootScope, $controller, $injector) {
-       
+
        scope = $rootScope.$new()
        ctrl = $controller('gameController', {$scope: scope})
-  
+
         createCorridor = function() {
             return $injector.get('Corridor')
         }

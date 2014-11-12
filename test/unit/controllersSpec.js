@@ -7,7 +7,7 @@ describe('pacman controllers', function() {
   beforeEach(module('pacmanServices'))
 
   describe('gameController', function() {
-    var scope, ctrl, cell, createCell, corridor, dot, createCorridor, wall, createWall, createDot, ghost, createGhost, pacman, createPacman, maze, createMaze
+    var scope, ctrl, cell, createCell, corridor, dot, createCorridor, wall, createWall, createDot, ghost, createGhost, pacman, createPacman, maze, createMaze, layout, createLayout
 
     beforeEach(inject(function($rootScope, $controller, $injector) {
        
@@ -35,20 +35,19 @@ describe('pacman controllers', function() {
         createMaze = function() {
             return $injector.get('Maze')
         }
+        createLayout = function() {
+            return $injector.get('Layout')
+        }
 
-        // createBoard = function() {
-        //     return $injector.get('Grid')
-        // }
-        //  createPacman = function() {
-        //     return $injector.get('Pacman')
-        // }
         wall = createWall()
         corridor = createCorridor()
-        cell = createCell()
+        cell = createCell(corridor)
         dot = createDot()
         ghost = createGhost()
         pacman = createPacman()
         maze = createMaze()
+        layout = createLayout()
+
 
       }))
 
@@ -72,11 +71,17 @@ describe('pacman controllers', function() {
        it('the ghost service should be available for testing the gameController', function() {
         expect(ghost).toBeTruthy();
       })
+
         it('the pacman service should be available for testing the gameController', function() {
         expect(pacman).toBeTruthy();
       })
+
       it('the maze service should be available for testing the gameController', function() {
         expect(maze).toBeTruthy();
+      })
+
+      it('the layout service should be available for testing the gameController', function() {
+        expect(layout.length).toEqual(443);
       })
 
 

@@ -4,9 +4,18 @@
 
 var pacmanControllers = angular.module('pacmanControllers', []);
 
-pacmanControllers.controller('gameController', ['$scope','Cell' ,'Corridor', function($scope, Cell, Grid, Pacman, Corridor) {
-    
- 
+pacmanControllers.controller('gameController', ['$scope','Cell' ,'Corridor', 'Wall', 'Pacman', 'Dot', 'Ghost', 'Maze',  function($scope, Cell, Grid, Pacman, Corridor, Maze) {
+      
+  
+      // var cell = new Cell
+      // var pacman = new Pacman
+      // var maze = new Maze(30, 30)
+     
+
+      // maze.place(arrayWalls)
+
+     
+      
 
   // setupGame()
 
